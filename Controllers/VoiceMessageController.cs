@@ -1,5 +1,6 @@
 ﻿using Telegram.Bot;
 using Telegram.Bot.Types;
+using StanislavShabalinBot.Configuration;
 
 namespace StanislavShabalinBot.Controllers
 {
@@ -11,12 +12,11 @@ namespace StanislavShabalinBot.Controllers
         {
             _telegramClient = telegramBotClient;
         }
-        // VoiceMessageController.cs
 
         public async Task Handle(Message message, CancellationToken ct)
         {
             Console.WriteLine($"Контроллер {GetType().Name} получил сообщение");
-            await _telegramClient.SendTextMessageAsync(message.Chat.Id, $"Получено голосовое сообщение", cancellationToken: ct);
+            await _telegramClient.SendTextMessageAsync(message.Chat.Id, $"Получено голосовое сообщение.", cancellationToken: ct);
         }
     }
 }

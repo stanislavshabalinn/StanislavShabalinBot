@@ -6,6 +6,7 @@ using Microsoft.Extensions.Hosting;
 using Telegram.Bot;
 using StanislavShabalinBot.Controllers;
 using StanislavShabalinBot.Services;
+using StanislavShabalinBot.Configuration;
 
 namespace StanislavShabalinBot
 {
@@ -29,15 +30,26 @@ namespace StanislavShabalinBot
 
         static void ConfigureServices(IServiceCollection services)
         {
+            AppSettings appSettings = BuildAppSettings();
+            services.AddSingleton(appSettings);
+
+            services.AddSingleton<IStorage, MemoryStorage>();
+
             // Подключаем контроллеры сообщений и кнопок
             services.AddTransient<DefaultMessageController>();
             services.AddTransient<VoiceMessageController>();
             services.AddTransient<TextMessageController>();
             services.AddTransient<InlineKeyboardController>();
-            services.AddSingleton<ITelegramBotClient>(provider => new TelegramBotClient("7545753406:AAHdHwCaKj2AldNZIywcTfjza0aDCRzLza0"));
-            services.AddHostedService<Bot>();
-            services.AddSingleton<IStorage, MemoryStorage>();
 
+            services.AddSingleton<ITelegramBotClient>(provider => new TelegramBotClient(appSettings.BotToken));
+            services.AddHostedService<Bot>();
+        }
+        static AppSettings BuildAppSettings()
+        {
+            return new AppSettings()
+            {
+                BotToken = "7545753406:AAHdHwCaKj2AldNZIywcTfjza0aDCRzLza0"
+            };
         }
     }
 }
