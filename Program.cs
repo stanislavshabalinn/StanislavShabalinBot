@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Telegram.Bot;
 using StanislavShabalinBot.Controllers;
+using StanislavShabalinBot.Services;
 
 namespace StanislavShabalinBot
 {
@@ -35,7 +36,8 @@ namespace StanislavShabalinBot
             services.AddTransient<InlineKeyboardController>();
             services.AddSingleton<ITelegramBotClient>(provider => new TelegramBotClient("7545753406:AAHdHwCaKj2AldNZIywcTfjza0aDCRzLza0"));
             services.AddHostedService<Bot>();
-                        
+            services.AddSingleton<IStorage, MemoryStorage>();
+
         }
     }
 }
