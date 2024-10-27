@@ -1,7 +1,7 @@
 ﻿using Telegram.Bot;
 using Telegram.Bot.Types;
 
-namespace VoiceTexterBot.Controllers
+namespace StanislavShabalinBot.Controllers
 {
     public class VoiceMessageController
     {

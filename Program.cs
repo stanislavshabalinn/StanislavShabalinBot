@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Telegram.Bot;
-using VoiceTexterBot.Controllers;
+using StanislavShabalinBot.Controllers;
 
 namespace StanislavShabalinBot
 {
