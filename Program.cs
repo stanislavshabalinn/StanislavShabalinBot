@@ -7,6 +7,7 @@ using Telegram.Bot;
 using StanislavShabalinBot.Controllers;
 using StanislavShabalinBot.Services;
 using StanislavShabalinBot.Configuration;
+using StanislavSabalinBot.Controllers;
 
 namespace StanislavShabalinBot
 {
