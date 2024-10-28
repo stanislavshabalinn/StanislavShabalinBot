@@ -40,7 +40,7 @@ namespace StanislavShabalinBot
             services.AddTransient<VoiceMessageController>();
             services.AddTransient<TextMessageController>();
             services.AddTransient<InlineKeyboardController>();
-
+            services.AddSingleton<IFileHandler, AudioFileHandler>();
             services.AddSingleton<ITelegramBotClient>(provider => new TelegramBotClient(appSettings.BotToken));
             services.AddHostedService<Bot>();
         }
@@ -48,7 +48,10 @@ namespace StanislavShabalinBot
         {
             return new AppSettings()
             {
-                BotToken = "7545753406:AAHdHwCaKj2AldNZIywcTfjza0aDCRzLza0"
+                DownloadsFolder = "C:\\Users\\evmor\\Downloads",
+                BotToken = "7545753406:AAHdHwCaKj2AldNZIywcTfjza0aDCRzLza0",
+                AudioFileName = "audio",
+                InputAudioFormat = "ogg",
             };
         }
     }

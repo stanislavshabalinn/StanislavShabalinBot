@@ -1,4 +1,14 @@
-﻿namespace StanislavShabalinBot.Extensions
+﻿using System;
+using System.Text;
+using System.Threading.Tasks;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Telegram.Bot;
+using StanislavShabalinBot.Controllers;
+using StanislavShabalinBot.Services;
+using StanislavShabalinBot.Configuration;
+
+namespace StanislavShabalinBot.Extensions
 {
     public static class StringExtension
     {
