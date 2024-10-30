@@ -2,9 +2,10 @@
 using Telegram.Bot;
 using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
-using StanislavShabalinBot.Services;
+using StanislavSabalinBot.Controllers;
 
-namespace StanislavShabalinBot.Controllers
+
+namespace StanislavSabalinBot.Controllers
 {
     public class InlineKeyboardController
     {

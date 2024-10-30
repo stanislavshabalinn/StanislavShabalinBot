@@ -49,7 +49,7 @@ namespace StanislavShabalinBot
         {
             return new AppSettings()
             {
-                DownloadsFolder = "C:\\Users\\evmor\\Downloads",
+                DownloadsFolder = "C:\\Users\\shabalin_sa\\Downloads",
                 BotToken = "7545753406:AAHdHwCaKj2AldNZIywcTfjza0aDCRzLza0",
                 AudioFileName = "audio",
                 InputAudioFormat = "ogg",
