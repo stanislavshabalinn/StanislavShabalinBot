@@ -27,5 +27,9 @@
         /// Формат аудио при загрузке
         /// </summary>
         public string InputAudioBitrate { get; set; }
+        /// <summary>
+        /// Битрейт аудио при загрузке
+        /// </summary>
+        public float InputAudioBitrate { get; set; }
     }
 }
