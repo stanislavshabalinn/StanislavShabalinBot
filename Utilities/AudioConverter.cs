@@ -15,6 +15,7 @@ namespace VoiceTexterBot.Utilities
                 .ProcessSynchronously();
         }
 
+
         private static string GetSolutionRoot()
         {
             var dir = Path.GetDirectoryName(Directory.GetCurrentDirectory());
