@@ -1,4 +1,6 @@
-﻿using System.Text;
+﻿using System.Reflection;
+using System.Text;
+using FFMpegCore.Enums;
 using Newtonsoft.Json.Linq;
 using StanislavSabalinBot.Extensions;
 using StanislavShabalinBot.Extensions;
@@ -11,7 +13,7 @@ namespace StanislavSabalinBot.Utilities
         public static string DetectSpeech(string audioPath, float inputBitrate, string languageCode)
         {
             Vosk.Vosk.SetLogLevel(0);
-            var modelPath = Path.Combine(DirectoryExtension.GetSolutionRoot(), "Speech-models", $"vosk-model-small-{languageCode.ToLower()}");
+            var modelPath = Path.Combine(DirectoryExtension.GetSolutionRoot(), "StanislavShabalinBot", $"Speech-models\\vosk-model-small-ru"); 
             Model model = new(modelPath);
             return GetWords(model, audioPath, inputBitrate);
         }
