@@ -54,7 +54,7 @@ namespace StanislavShabalinBot
                 AudioFileName = "audio",
                 InputAudioFormat = "ogg",
                 OutputAudioFormat = "wav", // Новое поле
-                InputAudioBitrate = "48000",
+                InputAudioBitrate = 48000,
             };
         }
     }

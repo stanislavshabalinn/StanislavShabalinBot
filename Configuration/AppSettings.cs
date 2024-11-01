@@ -26,7 +26,7 @@
         /// <summary>
         /// Формат аудио при загрузке
         /// </summary>
-        public string InputAudioBitrate { get; set; }
+        //public string InputAudioBitrate { get; set; }
         /// <summary>
         /// Битрейт аудио при загрузке
         /// </summary>
