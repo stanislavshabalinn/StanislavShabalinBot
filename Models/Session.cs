@@ -1,4 +1,5 @@
 ﻿namespace StanislavShabalinBot.Models
+
 {
     public class Session
     {
